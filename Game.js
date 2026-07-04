@@ -1,9 +1,8 @@
-function makeUser(name, age) {
-    return {
-        name: name,
-        age: age,
-    };
-}
+const user = {
+    name: 'John',
+    age: 30,
+};
 
-const user = makeUser('John', 30);
-alert(user.age);
+users = '*' + user.name + '*' + ':' + user.age;
+
+alert(users);
