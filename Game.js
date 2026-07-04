@@ -1,7 +1,9 @@
-const name = prompt('What is your name?', 'John');
+function makeUser(name, age) {
+    return {
+        name: name,
+        age: age,
+    };
+}
 
-const user = {
-    [name]: 4,
-};
-
-alert(user.John);
+const user = makeUser('John', 30);
+alert(user.age);
