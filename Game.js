@@ -1,8 +1,7 @@
+const name = prompt('What is your name?', 'John');
+
 const user = {
-    name: "John",
-    age: 30,
+    [name]: 4,
 };
 
-let key = prompt('Enter a kay values', "name", "age");
-
-alert(user[key]);
+alert(user.John);
