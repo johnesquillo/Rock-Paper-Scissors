@@ -1,5 +1,5 @@
 function playGame() {
-    
+
 }
 
 
@@ -12,20 +12,48 @@ function getHumanChoice() {
     
     const humanSelection = ['rock', 'paper', 'scissors'];
 
-    const myChoice = prompt('Enter your choice: rock, paper, or scissors');
+    const humanChoice = prompt('Choose rock, paper, or scissors:', "");
+    return humanChoice;
 
-    (myChoice === "") ?  alert('Canceled!') : null;
+    if (humanChoice === computerSelection) {
+        alert('Draw!');
 
-    let result = (rock > scissors) ? alert('You win!') :
-                 (scissors > paper) ? alert('You win!') :
-                 (paper > rock) ? alert('You win!') : alert('You lose!');
-                 alert(result);
+    } else if (humanChoice === 'rock' && computerSelection === 'scissors') {
+        alert('You win!');
+
+    } else if (humanChoice === 'scissors' && computerSelection === 'paper') {
+        alert('You win!');
+
+    } else if (humanChoice === 'paper' && computerSelection === 'rock') {
+        alert('You win!');
+
+    } else {
+        alert('Computer wins!');
+    }
+    
 }
 
 function getComputerChoice() {
     
     const computerSelection = ['rock', 'paper', 'scissors'];
+    const randomIndex = Math.floor(Math.random() * computerSelection.length);
+    return computerSelection[randomIndex];
     
+    if (computerSelection === humanSelection) {
+        alert('Draw!');
+        
+    } else if (computerSelection === 'rock' && humanSelection === 'scissors') {
+        alert('Computer wins!');
+
+    } else if (computerSelection === 'scissors' && humanSelection === 'paper') {
+        alert('Computer wins!');
+
+    } else if (computerSelection === 'paper' && humanSelection === 'rock') {
+        alert('Computer wins!');
+
+    } else {
+        alert('You win!');
+    }
 
 }
 
