@@ -1,3 +1,9 @@
+function playGame() {
+    
+}
+
+
+
 function playRound(humanChoice, computerChoice) {
     
 }
@@ -19,8 +25,11 @@ function getHumanChoice() {
 function getComputerChoice() {
     
     const computerSelection = ['rock', 'paper', 'scissors'];
+    
 
 }
+
+
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
