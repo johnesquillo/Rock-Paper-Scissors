@@ -1,4 +1,4 @@
-<!-- My Pseudocode -->
+**My Pseudocode**
 
 1. playGame
     * Control overall game
