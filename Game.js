@@ -1,8 +1,28 @@
-const user = {
-    name: 'John',
-    age: 30,
-};
+function playRound(humanChoice, computerChoice) {
+    
+}
 
-users = '*' + user.name + '*' + ':' + user.age;
+function getHumanChoice() {
+    
+    const humanSelection = ['rock', 'paper', 'scissors'];
 
-alert(users);
+    const myChoice = prompt('Enter your choice: rock, paper, or scissors');
+
+    (myChoice === "") ?  alert('Canceled!') : null;
+
+    let result = (rock > scissors) ? alert('You win!') :
+                 (scissors > paper) ? alert('You win!') :
+                 (paper > rock) ? alert('You win!') : alert('You lose!');
+                 alert(result);
+}
+
+function getComputerChoice() {
+    
+    const computerSelection = ['rock', 'paper', 'scissors'];
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
