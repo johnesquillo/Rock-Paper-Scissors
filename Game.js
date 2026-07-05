@@ -1,5 +1,8 @@
 function playGame() {
-
+    alert('Welcome to Rock, Paper, Scissors!');
+    for (let i = 0; i < 5; i++) {
+       
+    }
 }
 
 
@@ -57,7 +60,7 @@ function getComputerChoice() {
 
 }
 
-
+playGame();
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
