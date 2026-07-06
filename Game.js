@@ -2,38 +2,45 @@ function playGame() {
     alert('Welcome to Rock, Paper, Scissors!');
     alert('You will be playing against the computer.');
     
-    const player = prompt ('Are you ready to play?', "YES or NO");
+    const player = prompt ('Are you ready to play KUPAL?', "YES or NO");
     
     if (player === '' || player === null) {
-        alert('Takot yarn?!');
+        alert('TAKOT YARN?!');
 
     } else if (player === 'YES' || player === 'yes') {
-        alert('Lakas mo naman pala ya!');
+        alert('LAKAS MO NAMAN PALA YAH!');
 
     } else if (player === 'NO' || player === 'no') {
-        alert('Wala ka pa lang bitaw eh!');
+        alert('WALA KA PA LANG BITAW!');
 
     } else {
-        alert('Baka takot ka yah?');
+        alert('BAKA TAKOT KA YAH?!');
     }
 
-    for (let i = 0; i < 5; i++) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        playRound(humanChoice, computerChoice);
-    }
+    const humanScore = 0;
+    const computerScore = 0;
 
-    let humanScore = 0;
-    let computerScore = 0;
+    for (let i = 1; i <= 5; i++) {
+        alert(`Round: ${i}`);
+        alert('MATALO KA SANA YAH!');
 
-    if (humanScore > computerScore) {
-        alert('Panalo ka yah!');
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
 
-    } else if (computerScore > humanScore) {
-        alert('Olats ka yah!');
+        const result = playRound(humanSelection, computerSelection);
 
-    } else {
-        alert('Tabla yah!');
+        if (result === 'human') {
+            humanScore++;
+            alert(`Panalo ka yah! Score: Human ${humanScore} - Computer ${computerScore}`);
+
+        } else if (result === 'computer') {
+            computerScore++;
+            alert(`Computer wins! Score: Computer ${computerScore} - Human ${com}`);
+            alert('TANGA MO PUMILI YAH!')
+
+        } else {
+            alert('HANGGANG DRAW KA LANG PALA YAH!');
+        }
     }
 
     
