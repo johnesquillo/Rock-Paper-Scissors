@@ -26,6 +26,16 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
+    if (humanScore > computerScore) {
+        alert('Panalo ka yah!');
+
+    } else if (computerScore > humanScore) {
+        alert('Olats ka yah!');
+
+    } else {
+        alert('Tabla yah!');
+    }
+
     
 }
 
