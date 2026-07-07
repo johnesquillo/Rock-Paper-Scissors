@@ -36,7 +36,7 @@ function playGame() {
         } else if (result === 'computer') {
             computerScore++;
             alert(`Computer wins! Score: Computer ${computerScore} - Human ${com}`);
-            alert('GINAGAWA MOOO!');
+            alert('TANGA MO PUMILI YAH!')
 
         } else {
             alert('HANGGANG DRAW KA LANG PALA YAH!');
@@ -69,7 +69,8 @@ function getHumanChoice() {
 
 function getComputerChoice() {
     const computerSelection = ['rock', 'paper', 'scissors'];
-    return computerSelection;
+    const randomIndex = Math.floor(Math.random() * computerSelection.length);
+    return computerSelection[randomIndex];
 
 }
 
