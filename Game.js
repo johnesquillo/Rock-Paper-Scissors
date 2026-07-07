@@ -1,6 +1,6 @@
 function playGame() {
-    alert('Welcome to Rock, Paper, Scissors!');
-    alert('You will be playing against the computer.');
+    alert('WELCOME SA PANG WEIRDONG LARO!');
+    alert('YOU WILL BE PLAYING AGAINTS SA WALANG KWENTANG COMPUTER!');
     
     const player = prompt ('Are you ready to play KUPAL?', "YES or NO");
     
@@ -36,12 +36,23 @@ function playGame() {
         } else if (result === 'computer') {
             computerScore++;
             alert(`Computer wins! Score: Computer ${computerScore} - Human ${com}`);
-            alert('TANGA MO PUMILI YAH!')
+            alert('GINAGAWA MOOO!');
 
         } else {
             alert('HANGGANG DRAW KA LANG PALA YAH!');
         }
     }
+
+        if (humanScore > computerScore) {
+            alert('NANDAYA ANG KUPAL!');
+
+        } else if (computerScore > humanScore) {
+            alert('TINALO KA LANG NG COMPUTER YAH!');
+
+        } else {
+            alert(`SCORE MO YAH! : ${humanScore} `);
+            alert(`COMPUTER SCORE : ${computerScore}`);
+        }
 
     
 }
@@ -49,7 +60,7 @@ function playGame() {
 
 
 function playRound(humanChoice, computerChoice) {
-
+    
 }
 
 function getHumanChoice() {
@@ -58,8 +69,7 @@ function getHumanChoice() {
 
 function getComputerChoice() {
     const computerSelection = ['rock', 'paper', 'scissors'];
-    const randomIndex = Math.floor(Math.random() * computerSelection.length);
-    return computerSelection[randomIndex];
+    return computerSelection;
 
 }
 
