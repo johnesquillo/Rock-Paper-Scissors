@@ -23,6 +23,9 @@ function playGame() {
             return;
         }
 
+        let humanScore = 0;
+        let computerScore = 0;
+
      for (let i = 1; i <= 5; i++) {
         alert(`Round: ${i}`);
         alert('MATALO KA SANA YAH!');
@@ -32,15 +35,22 @@ function playGame() {
 
         const result = playRound(humanSelection, computerSelection);
 
+        
+
         if (result === 'human') {
             humanScore++;
-            alert(`Panalo ka yah! Score: Human ${humanScore} - Computer ${computerScore}`);
+            alert(`Your Score: ${humanScore}`);
 
         } else if (result === 'computer') {
             computerScore++;
-            alert(`Computer wins! Score: Computer ${computerScore} - Human ${com}`);
-            alert('BOBO MO PUMILI YAH!')
+            alert(`Computer Score: ${computerScore}`);
+
+        } else {
+            alert(`Human Score: ${humanScore}`);
+            alert(`Computer Score: ${computerScore}`);
         } 
+            
+
     }
 
         if (humanScore > computerScore) {
@@ -50,7 +60,7 @@ function playGame() {
             alert('TINALO KA LANG NG COMPUTER YAH!');
 
         } else {
-            alert(`SCORE MO YAH! : ${humanScore} `);
+            alert(`SCORE MO YAH! : ${humanScore} `);    
             alert(`COMPUTER SCORE : ${computerScore}`);
         }
 
@@ -59,20 +69,36 @@ function playGame() {
 
 
 
+
+
 function playRound(humanChoice, computerChoice) {
         
+
         alert(`You Chose: ${humanChoice}`);
         alert(`Computer Chose: ${computerChoice}`)
 
-        let res = (humanChoice === computerChoice) ? alert("It's a Tie!") : 
-                  (humanChoice === 'rock' && computerChoice === 'scissors') || 
-                  (humanChoice === 'paper' && computerChoice === 'rock') ||
-                  (humanChoice === 'scissors' && computerChoice === 'paper') ? alert('Human Wins!') :
-                  alert('Computer Wins!');
-    
+        if (humanChoice === computerChoice) {
+            return "tie";
+            
+        } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
+            return 'human';
+            
+        } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+            return 'human!';
+            
+
+        } else if (humanChoice === 'paper' && computerChoice === 'rock') {
+            return 'human';
+            
+
+        } else {
+            return 'computer!';
+        }
 }
 
 function getHumanChoice() {
+    
+    
     const humanSelection = ['rock', 'paper', 'scissors'];
      
     const human = prompt(`Enter your choice: ${humanSelection}`);
@@ -98,8 +124,8 @@ function getComputerChoice() {
 
 }
 
-playGame();
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+
+playGame();
+playRound(humanSelection, computerSelection);   
+
