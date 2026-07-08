@@ -4,23 +4,12 @@ function playGame() {
     
     const player = prompt ('Are you ready to play KUPAL?', "YES or NO");
     
-    if (player === '' || player === null) {
-        alert('TAKOT YARN?!');
+     const input = (player === '' || player === null) ? alert("BAKA TAKOT KA YAH?!") :
+                   (player === 'YES' || player === 'yes') ? alert("LAKAS MO NAMAN PALA YAH!") :
+                   (player === 'NO' || player === 'no') ? alert("BAKA TAKOT KA YAH?!") : 
+                   alert("WALA KA PA LANG BITAW EH!");
 
-    } else if (player === 'YES' || player === 'yes') {
-        alert('LAKAS MO NAMAN PALA YAH!');
-
-    } else if (player === 'NO' || player === 'no') {
-        alert('WALA KA PA LANG BITAW!');
-
-    } else {
-        alert('BAKA TAKOT KA YAH?!');
-    }
-
-    const humanScore = 0;
-    const computerScore = 0;
-
-    for (let i = 1; i <= 5; i++) {
+     for (let i = 1; i <= 5; i++) {
         alert(`Round: ${i}`);
         alert('MATALO KA SANA YAH!');
 
@@ -37,10 +26,7 @@ function playGame() {
             computerScore++;
             alert(`Computer wins! Score: Computer ${computerScore} - Human ${com}`);
             alert('BOBO MO PUMILI YAH!')
-
-        } else {
-            alert('HANGGANG DRAW KA LANG PALA YAH!');
-        }
+        } 
     }
 
         if (humanScore > computerScore) {
