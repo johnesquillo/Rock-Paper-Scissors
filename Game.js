@@ -36,7 +36,7 @@ function playGame() {
         } else if (result === 'computer') {
             computerScore++;
             alert(`Computer wins! Score: Computer ${computerScore} - Human ${com}`);
-            alert('TANGA MO PUMILI YAH!')
+            alert('BOBO MO PUMILI YAH!')
 
         } else {
             alert('HANGGANG DRAW KA LANG PALA YAH!');
@@ -60,6 +60,15 @@ function playGame() {
 
 
 function playRound(humanChoice, computerChoice) {
+
+        alert(`You Chose: ${humanChoice}`);
+        alert(`Computer Chose: ${computerChoice}`)
+
+        let res = (humanChoice === computerChoice) ? alert("It's a Tie!") : 
+                  (humanChoice === 'rock' && computerChoice === 'scissors') || 
+                  (humanChoice === 'paper' && computerChoice === 'rock') ||
+                  (humanChoice === 'scissors' && computerChoice === 'paper') ? alert('Human Wins!') :
+                  alert('Computer Wins!');
     
 }
 
@@ -69,8 +78,8 @@ function getHumanChoice() {
 
 function getComputerChoice() {
     const computerSelection = ['rock', 'paper', 'scissors'];
-    const randomIndex = Math.floor(Math.random() * computerSelection.length);
-    return computerSelection[randomIndex];
+    const selectionIndex = Math.floor(Math.random() * computerSelection.length);
+    return computerSelection[selectionIndex];
 
 }
 
