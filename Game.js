@@ -4,10 +4,13 @@ function playGame() {
     
     const player = prompt ('Are you ready to play KUPAL?', "YES or NO");
     
-     const input = (player === '' || player === null) ? alert("BAKA TAKOT KA YAH?!") :
-                   (player === 'YES' || player === 'yes') ? alert("LAKAS MO NAMAN PALA YAH!") :
-                   (player === 'NO' || player === 'no') ? alert("BAKA TAKOT KA YAH?!") : 
-                   alert("WALA KA PA LANG BITAW EH!");
+        if (player === null || player.trim() === "") {
+            alert("BAKA TAKOT KA YAH?!")
+            return;
+        }
+
+        let input = (player === "YES" || player === "yes") ? alert("LAKAS MO NAMAN PALA YAH!") :
+                    (player === "NO" || player === "no") ? alert("TAKOT YARN?!") : alert("WALA KA PA LANG BITAW EH!"); 
 
      for (let i = 1; i <= 5; i++) {
         alert(`Round: ${i}`);
