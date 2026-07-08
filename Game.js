@@ -9,8 +9,19 @@ function playGame() {
             return;
         }
 
-        let input = (player === "YES" || player === "yes") ? alert("LAKAS MO NAMAN PALA YAH!") :
-                    (player === "NO" || player === "no") ? alert("TAKOT YARN?!") : alert("WALA KA PA LANG BITAW EH!"); 
+        const input = player.trim().toLowerCase();
+
+        if (input === "yes") {
+            alert("LAKAS MO NAMAN PALA YAH!");
+
+        } else if (input === "no") {
+            alert("TAKOT YARN?")
+            return;
+
+        } else {
+            alert("WALA KA PA LANG BITAW EH!")
+            return;
+        }
 
      for (let i = 1; i <= 5; i++) {
         alert(`Round: ${i}`);
@@ -62,6 +73,18 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function getHumanChoice() {
+    const humanSelection = ['rock', 'paper', 'scissors']
+    const human = prompt('Choose your choice: rock, paper, scissors')
+
+    if (
+        human === 'rock',
+        human === 'paper',
+        human === 'scissors'
+    ) {
+        return human;
+    }
+        alert('Invalid Choices!');
+    
 
 }
 
