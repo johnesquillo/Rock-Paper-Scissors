@@ -60,7 +60,7 @@ function playGame() {
 
 
 function playRound(humanChoice, computerChoice) {
-
+        
         alert(`You Chose: ${humanChoice}`);
         alert(`Computer Chose: ${computerChoice}`)
 
@@ -73,18 +73,21 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function getHumanChoice() {
-    const humanSelection = ['rock', 'paper', 'scissors']
-    const human = prompt('Choose your choice: rock, paper, scissors')
+    const humanSelection = ['rock', 'paper', 'scissors'];
+     
+    const human = prompt(`Enter your choice: ${humanSelection}`);
 
-    if (
-        human === 'rock',
-        human === 'paper',
-        human === 'scissors'
-    ) {
-        return human;
+   if(human === null) {
+    return null;
+   }
+
+    const result = human.toLowerCase();
+
+    if(human === 'rock' || human === 'paper' || human === 'scissors') {
+        return result;
+
     }
         alert('Invalid Choices!');
-    
 
 }
 
