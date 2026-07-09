@@ -45,6 +45,16 @@ function playGame() {
 
     }
 
+        if (humanScore > computerScore) {
+            alert(`Human highest score: ${humanScore}`);
+
+        } else if(humanScore < computerScore) {
+            alert(`Computer highest score: ${computerScore}`);
+
+        } else {
+            alert(`Its a tie! ${humanScore} - ${computerScore}`);
+        }
+
 }
 
 function playRound(humanChoice, computerChoice) {
