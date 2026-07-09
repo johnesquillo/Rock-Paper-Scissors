@@ -30,7 +30,18 @@ function playGame() {
             return;
         }
 
+        const result = playRound(humanSelection, computerSelection);
         const computerSelection = getComputerChoice();
+
+        if (result === 'human') {
+            humanScore++;
+            alert('You win!');
+
+        } else if (result === 'computer') {
+            computerScore++;
+            alert('Computer win!');
+        }
+            alert(`Human score: ${humanScore} | Computer score: ${computerScore}`);
 
     }
 
