@@ -16,8 +16,8 @@ function playGame() {
         return;
     }
 
-    const humanScore = 0;
-    const computerScore = 0;
+    let humanScore = 0;
+    let computerScore = 0;
 
     for (let i = 1; i <= 5; i++) {
         alert(`Round ${i}`);
@@ -30,8 +30,9 @@ function playGame() {
             return;
         }
 
-        const result = playRound(humanSelection, computerSelection);
         const computerSelection = getComputerChoice();
+        const result = playRound(humanSelection, computerSelection);
+        
 
         if (result === 'human') {
             humanScore++;
@@ -40,8 +41,13 @@ function playGame() {
         } else if (result === 'computer') {
             computerScore++;
             alert('Computer win!');
+
+        } else {
+            alert("It's a tie");
         }
-            alert(`Human score: ${humanScore} | Computer score: ${computerScore}`);
+            alert(`Human score: ${humanScore}`);
+            alert(`Computer score: ${computerScore}`);
+            
 
     }
 
@@ -52,26 +58,27 @@ function playGame() {
             alert(`Computer highest score: ${computerScore}`);
 
         } else {
-            alert(`Its a tie! ${humanScore} - ${computerScore}`);
+            alert("It's a tie!");
         }
+            alert(`Human score: ${humanScore} | Computer score: ${computerScore}`);
 
 }
 
 function playRound(humanChoice, computerChoice) {
 
-        alert(`You Chose: ${getHumanChoice}`);
-        alert(`Computer Chose: ${getComputerChoice}`);
+        alert(`You Chose: ${humanChoice}`);
+        alert(`Computer Chose: ${computerChoice}`);
 
         if (humanChoice === computerChoice) {
             return 'tie';
 
-        } else if (humanChoice === 'rock' || computerChoice === 'scissors') {
+        } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
             return 'human';
 
-        } else if (humanChoice === 'scissors' || computerChoice === 'paper') {
+        } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
             return 'human';
 
-        } else if (humanChoice === 'paper' || computerChoice === 'rock') {
+        } else if (humanChoice === 'paper' && computerChoice === 'rock') {
             return 'human';
 
         } else {
@@ -88,6 +95,8 @@ function getHumanChoice() {
     if (human === null) {
         return null;
     }
+
+    const result = human.toLowerCase();
 
     if (human === 'rock' || human === 'paper' || human === 'scissors') {
         return result;
