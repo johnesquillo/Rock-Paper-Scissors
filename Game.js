@@ -31,6 +31,12 @@ function playGame() {
         alert('MATALO KA SANA YAH!');
 
         const humanSelection = getHumanChoice();
+
+         if (humanSelection === null) {
+             alert("Game cancelled");
+             return;
+         }
+         
         const computerSelection = getComputerChoice();
 
         const result = playRound(humanSelection, computerSelection);
@@ -39,16 +45,18 @@ function playGame() {
 
         if (result === 'human') {
             humanScore++;
-            alert(`Your Score: ${humanScore}`);
+            alert('You win!');
 
         } else if (result === 'computer') {
             computerScore++;
-            alert(`Computer Score: ${computerScore}`);
+            alert('You Lose!');
 
         } else {
-            alert(`Human Score: ${humanScore}`);
-            alert(`Computer Score: ${computerScore}`);
+            alert("It's a Tie!");
+            
         } 
+             alert(`Human score: ${humanScore}`);
+             alert(`Computer score: ${computerScore}`);
             
 
     }
@@ -75,7 +83,7 @@ function playRound(humanChoice, computerChoice) {
         
 
         alert(`You Chose: ${humanChoice}`);
-        alert(`Computer Chose: ${computerChoice}`)
+        alert(`Computer Chose: ${computerChoice}`);
 
         if (humanChoice === computerChoice) {
             return "tie";
@@ -84,7 +92,7 @@ function playRound(humanChoice, computerChoice) {
             return 'human';
             
         } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-            return 'human!';
+            return 'human';
             
 
         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
@@ -92,7 +100,7 @@ function playRound(humanChoice, computerChoice) {
             
 
         } else {
-            return 'computer!';
+            return 'computer';
         }
 }
 
@@ -113,9 +121,12 @@ function getHumanChoice() {
         return result;
 
     }
-        alert('Invalid Choices!');
+        alert('Invalid Choice');
+        return getHumanChoice;
+              
 
 }
+        
 
 function getComputerChoice() {
     const computerSelection = ['rock', 'paper', 'scissors'];
@@ -127,5 +138,5 @@ function getComputerChoice() {
 
 
 playGame();
-playRound(humanSelection, computerSelection);   
+
 
