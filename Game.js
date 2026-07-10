@@ -64,9 +64,9 @@ function playGame() {
             alert("Better luck next time!");
 
         } else {
-            alert(`Your score: ${humanScore} `);    
-            alert(`Computer score: ${computerScore}`);
+            alert("It's a tie!");
         }
+            alert(`Your score: ${humanScore} | Computer score: ${computerScore}`);
 
     
 }
