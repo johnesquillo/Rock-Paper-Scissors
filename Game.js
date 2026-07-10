@@ -4,24 +4,20 @@ function playGame() {
     
     const player = prompt ('Are you ready to play KUPAL?', "YES or NO");
     
-        if (player === null || player.trim() === "") {
-            alert("BAKA TAKOT KA YAH?!")
-            return;
-        }
-
-        const input = player.trim().toLowerCase();
-
-        if (input === "yes") {
-            alert("LAKAS MO NAMAN PALA YAH!");
-
-        } else if (input === "no") {
-            alert("TAKOT YARN?")
+       if (player === null || player === '') {
+            alert("Game canceled!");
             return;
 
-        } else {
-            alert("WALA KA PA LANG BITAW EH!")
+       } else if (player === "YES" || player === "yes") {
+            alert("Greate lets start!");
+
+       } else if (player === "NO" || player === 'no') {
+            alert('You afraid with computer?');
             return;
-        }
+
+       } else {
+            return;
+       }
 
         let humanScore = 0;
         let computerScore = 0;
