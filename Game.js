@@ -118,7 +118,6 @@ function getHumanChoice() {
 
     }
         alert('Invalid Choice');
-        return getHumanChoice;
               
 
 }
