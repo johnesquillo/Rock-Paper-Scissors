@@ -24,7 +24,7 @@ function playGame() {
 
      for (let i = 1; i <= 5; i++) {
         alert(`Round: ${i}`);
-        alert('MATALO KA SANA YAH!');
+        alert('Chose Wisely!');
 
         const humanSelection = getHumanChoice();
 
@@ -58,14 +58,14 @@ function playGame() {
     }
 
         if (humanScore > computerScore) {
-            alert('NANDAYA ANG KUPAL!');
+            alert('Good job!!');
 
         } else if (computerScore > humanScore) {
-            alert('TINALO KA LANG NG COMPUTER YAH!');
+            alert("Better luck next time!");
 
         } else {
-            alert(`SCORE MO YAH! : ${humanScore} `);    
-            alert(`COMPUTER SCORE : ${computerScore}`);
+            alert(`Your score: ${humanScore} `);    
+            alert(`Computer score: ${computerScore}`);
         }
 
     
