@@ -1,3 +1,4 @@
+// Control overall game
 function playGame() {
     alert('WELCOME SA PANG WEIRDONG LARO!');
     alert('YOU WILL BE PLAYING AGAINTS SA WALANG KWENTANG COMPUTER!');
@@ -74,7 +75,7 @@ function playGame() {
 
 
 
-
+// Get Human and Computer choices
 function playRound(humanChoice, computerChoice) {
         
 
@@ -100,6 +101,7 @@ function playRound(humanChoice, computerChoice) {
         }
 }
 
+// Input user's choices
 function getHumanChoice() {
     
     
@@ -122,7 +124,7 @@ function getHumanChoice() {
 
 }
         
-
+// Computer random choices
 function getComputerChoice() {
     const computerSelection = ['rock', 'paper', 'scissors'];
     const selectionIndex = Math.floor(Math.random() * computerSelection.length);
@@ -131,7 +133,7 @@ function getComputerChoice() {
 }
 
 
-
+// Play game function call
 playGame();
 
 
