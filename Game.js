@@ -19,7 +19,7 @@ function playGame() {
        } else {
             return;
        }
-
+    //  Get the human and computer scores
         let humanScore = 0;
         let computerScore = 0;
 
