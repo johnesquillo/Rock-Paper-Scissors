@@ -136,6 +136,6 @@ function getComputerChoice() {
 // Play game function call
 playGame();
 
-asdasd
+
 
 
