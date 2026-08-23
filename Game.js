@@ -21,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const maxRounds = 5;
 
 
-    // =========================
-    // HUMAN CHOICE
-    // =========================
-
+    // Human Choice
     humanButtons.forEach((button) => {
 
         button.addEventListener("click", () => {
@@ -63,9 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // =========================
-    // COMPUTER CHOICE
-    // =========================
+    // Computer Choice
 
     function getComputerChoice() {
 
@@ -81,10 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return choices[randomIndex];
     }
 
-
-    // =========================
-    // PLAY ROUND
-    // =========================
+    // Play Round
 
     function playRound(humanChoice, computerChoice) {
 
@@ -109,9 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // UPDATE SCORE
-    // =========================
+    // Update Score
 
     function updateScore(result) {
 
@@ -126,9 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // SHOW ROUND RESULT
-    // =========================
+    // Round Result
 
     function showResult(
         result,
@@ -184,9 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // SHOW COMPUTER CHOICE
-    // =========================
+    // Computer Choice
 
     function showComputerChoice(choice) {
 
@@ -213,9 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // END GAME
-    // =========================
+    // End Game
 
     function endGame() {
 
